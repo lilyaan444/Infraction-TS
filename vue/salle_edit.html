@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Edition d'une infraction</title>
+  <link type="text/css" rel="stylesheet" href="./css/inventaire.css">
+  <link type="text/css" rel="stylesheet" href="./css/salle_edit.css">
+</head>
+
+<body>
+    <div id="div_salle_titre" class="divtitre"> Détail d'une infraction</div>
+    <div id="div_salle_detail">
+      <div class="salle_rubrique">
+        <div>
+            <span class="labeltitre">IDENTIFICATION</span><label id="lbl_erreur_num" class="labelerreur"></label>
+        </div>
+        <div>
+          <label for="edt_salle_num">numéro</label>
+          <span><input id="edt_salle_num" placeholder="n° salle" maxlength="5" size="5" type="text"></span>
+          <span><input id="edt_salle_lib" placeholder="libellé non obligatoire" size="30" type="text"> </span>
+        </div>
+        <div>
+          <label for="edt_salle_etage">le</label>
+          <span><input id="edt_salle_etage" size="5" type="text"></span><label id="lbl_erreur_etage" class="labelerreur"></label>
+        </div>
+      </div>
+      <div class="salle_rubrique">
+        <div> <span class="labeltitre">VEHICULE</span><label id="lbl_erreur_dept" class="labelerreur"></label>
+        </div>
+        <div> <label for="edt_salle_codedept">immatriculation</label>
+          <span><input id="edt_salle_codedept" placeholder="code dépt" size="5" type="text"></span>
+          <label id="lbl_salle_detail_dept" class="salle_commentaire"></label>
+        </div>
+      </div>
+      <div class="salle_rubrique">
+        <div> <span class="labeltitre">CONDUCTEUR</span><label id="lbl_erreur_dept" class="labelerreur"></label>
+        </div>
+        <div> <label for="edt_salle_codedept">n permis</label>
+          <span><input id="edt_salle_codedept" placeholder="Numéro permis" size="5" type="text"></span>
+          <label id="lbl_salle_detail_dept" class="salle_commentaire"></label>
+        </div>
+      </div>
+
+      <div class="salle_rubrique">
+        <div> <span class="labeltitre">DELITS</span><label id="lbl_erreur_equipt" class="labelerreur"></label>
+        </div>
+      </div>
+      <div class="salle_sousrubrique">
+        <div id="div_salle_equipement">
+          <div class="divtitre" >
+            Délits constatés :
+            <label id="lbl_equipement_total"> </label>
+          </div>
+          <table id="table_equipement" class="display compact hover" >
+            <thead>
+              <tr>
+                <th>nature</th>
+                <th>tarif</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+          
+          <div class="divaction">
+            <input id="btn_equipement_ajouter"   type="button" 				  		value="Ajouter">     		
+          </div>
+        </div>
+  
+        <div id="div_salle_equipement_edit">
+          <div class="divtitre" >
+            sélectionner un délit
+          </div>
+          <div class="equipement_rubrique">
+            <div>
+              <select id="select_equipement" size="6"></select>
+              <div>
+                <label id="lbl_erreur_select_equipement" class="labelerreur"></label>
+              </div>    
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="divaction">
+        <input id="btn_salle_retour" class="btnretour" value="Retour" type="button">
+        <input id="btn_salle_valider" value="Valider" type="button">
+        <input id="btn_salle_annuler" class="btnannuler" value="Annuler" type="button">
+      </div>
+    </div>
+  </body>
+  <script type="module" src="../controleur/salle_edit.js"></script>
+
+
+</html>
